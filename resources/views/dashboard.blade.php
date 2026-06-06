@@ -6,7 +6,7 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
             
             @if(session('success'))
                 <div class="bg-emerald-50 border border-emerald-200 text-emerald-700 px-4 py-3 rounded relative shadow-sm" role="alert">
@@ -15,7 +15,7 @@
             @endif
 
             <!-- Statistics Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                 <!-- Total -->
                 <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 p-6 flex flex-col hover:shadow-md transition-shadow">
                     <div class="flex justify-between items-center mb-4">
@@ -24,7 +24,7 @@
                             <i class="fa-solid fa-layer-group"></i>
                         </div>
                     </div>
-                    <span class="text-4xl font-extrabold text-gray-900 dark:text-white">{{ $stats['total'] ?? 0 }}</span>
+                    <span class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">{{ $stats['total'] ?? 0 }}</span>
                 </div>
                 
                 <!-- Pending -->
@@ -36,7 +36,7 @@
                             <i class="fa-solid fa-clock"></i>
                         </div>
                     </div>
-                    <span class="text-4xl font-extrabold text-gray-900 dark:text-white">{{ $stats['pending'] ?? 0 }}</span>
+                    <span class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">{{ $stats['pending'] ?? 0 }}</span>
                 </div>
 
                 <!-- Contacted -->
@@ -48,7 +48,7 @@
                             <i class="fa-solid fa-phone"></i>
                         </div>
                     </div>
-                    <span class="text-4xl font-extrabold text-gray-900 dark:text-white">{{ $stats['contacted'] ?? 0 }}</span>
+                    <span class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">{{ $stats['contacted'] ?? 0 }}</span>
                 </div>
 
                 <!-- Completed -->
@@ -60,66 +60,67 @@
                             <i class="fa-solid fa-check-double"></i>
                         </div>
                     </div>
-                    <span class="text-4xl font-extrabold text-gray-900 dark:text-white">{{ $stats['completed'] ?? 0 }}</span>
+                    <span class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">{{ $stats['completed'] ?? 0 }}</span>
                 </div>
             </div>
 
             <!-- Briefs Table -->
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-xl border border-gray-200 dark:border-gray-700">
-                <div class="px-6 py-5 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Recent Brief Submissions</h3>
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm rounded-xl border border-gray-200 dark:border-gray-700">
+                <div class="px-4 sm:px-6 py-4 sm:py-5 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 dark:text-white">Recent Brief Submissions</h3>
                 </div>
                 
-                <div class="overflow-x-auto">
+                <div class="overflow-x-auto w-full">
                     <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                         <thead class="bg-gray-50 dark:bg-gray-900">
                             <tr>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Name / Client</th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Contact Info</th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Description</th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Status</th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Submitted</th>
-                                <th scope="col" class="px-6 py-3 text-right text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Actions</th>
+                                <th scope="col" class="px-4 sm:px-6 py-3 text-left text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Name / Client</th>
+                                <th scope="col" class="px-4 sm:px-6 py-3 text-left text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider hidden sm:table-cell">Contact Info</th>
+                                <th scope="col" class="px-4 sm:px-6 py-3 text-left text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider hidden lg:table-cell">Description</th>
+                                <th scope="col" class="px-4 sm:px-6 py-3 text-left text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Status</th>
+                                <th scope="col" class="px-4 sm:px-6 py-3 text-left text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider hidden md:table-cell">Submitted</th>
+                                <th scope="col" class="px-4 sm:px-6 py-3 text-right text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Actions</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
                             @if(isset($briefs))
                                 @forelse($briefs as $brief)
                                 <tr class="hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
-                                    <td class="px-6 py-4 whitespace-nowrap">
+                                    <td class="px-4 sm:px-6 py-3 sm:py-4 whitespace-nowrap">
                                         <div class="text-sm font-medium text-gray-900 dark:text-white">{{ $brief->name }}</div>
+                                        <div class="text-xs text-gray-500 sm:hidden mt-1">{{ $brief->contact }}</div>
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap">
+                                    <td class="px-4 sm:px-6 py-3 sm:py-4 whitespace-nowrap hidden sm:table-cell">
                                         <div class="text-sm text-gray-600 dark:text-gray-300">{{ $brief->contact }}</div>
                                     </td>
-                                    <td class="px-6 py-4">
+                                    <td class="px-4 sm:px-6 py-3 sm:py-4 hidden lg:table-cell">
                                         <div class="text-sm text-gray-500 dark:text-gray-400 max-w-xs truncate" title="{{ $brief->description }}">
                                             {{ $brief->description }}
                                         </div>
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap">
+                                    <td class="px-4 sm:px-6 py-3 sm:py-4 whitespace-nowrap">
                                         @if($brief->status === 'pending')
-                                            <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400 border border-yellow-200 dark:border-yellow-800">
+                                            <span class="px-2 sm:px-3 py-1 inline-flex text-[10px] sm:text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400 border border-yellow-200 dark:border-yellow-800">
                                                 Pending
                                             </span>
                                         @elseif($brief->status === 'contacted')
-                                            <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400 border border-blue-200 dark:border-blue-800">
+                                            <span class="px-2 sm:px-3 py-1 inline-flex text-[10px] sm:text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400 border border-blue-200 dark:border-blue-800">
                                                 Contacted
                                             </span>
                                         @elseif($brief->status === 'completed')
-                                            <span class="px-3 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">
+                                            <span class="px-2 sm:px-3 py-1 inline-flex text-[10px] sm:text-xs leading-5 font-semibold rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">
                                                 Completed
                                             </span>
                                         @endif
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
+                                    <td class="px-4 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400 hidden md:table-cell">
                                         {{ $brief->created_at->diffForHumans() }}
                                     </td>
-                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <td class="px-4 sm:px-6 py-3 sm:py-4 whitespace-nowrap text-right text-sm font-medium">
                                         <form action="{{ route('briefs.update-status', $brief->id) }}" method="POST" class="inline-flex items-center gap-2">
                                             @csrf
                                             @method('PATCH')
-                                            <select name="status" class="text-xs border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500" onchange="this.form.submit()">
+                                            <select name="status" class="text-[10px] sm:text-xs border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 py-1 sm:py-2 pl-2 sm:pl-3 pr-6 sm:pr-8" onchange="this.form.submit()">
                                                 <option value="pending" {{ $brief->status === 'pending' ? 'selected' : '' }}>Pending</option>
                                                 <option value="contacted" {{ $brief->status === 'contacted' ? 'selected' : '' }}>Contacted</option>
                                                 <option value="completed" {{ $brief->status === 'completed' ? 'selected' : '' }}>Completed</option>
@@ -129,10 +130,10 @@
                                 </tr>
                                 @empty
                                 <tr>
-                                    <td colspan="6" class="px-6 py-12 text-center">
+                                    <td colspan="6" class="px-4 sm:px-6 py-8 sm:py-12 text-center">
                                         <div class="flex flex-col items-center justify-center text-gray-500 dark:text-gray-400">
-                                            <i class="fa-solid fa-inbox text-4xl mb-3 opacity-50"></i>
-                                            <p class="text-sm">Belum ada submission brief yang masuk.</p>
+                                            <i class="fa-solid fa-inbox text-3xl sm:text-4xl mb-3 opacity-50"></i>
+                                            <p class="text-xs sm:text-sm">Belum ada submission brief yang masuk.</p>
                                         </div>
                                     </td>
                                 </tr>
