@@ -301,27 +301,7 @@
         </div>
     </header>
 
-    <div class="bg-slate-50 py-8 border-b border-slate-200 overflow-hidden flex flex-col justify-center">
-        <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Dipercaya oleh berbagai brand inovatif</p>
-        <div class="relative flex overflow-x-hidden group">
-            <div class="flex animate-marquee whitespace-nowrap items-center space-x-16 px-8 opacity-60 grayscale group-hover:grayscale-0 transition-all duration-500">
-                <span class="text-2xl font-bold text-slate-800 flex items-center gap-2"><i class="fa-brands fa-apple text-3xl"></i> StudioMac</span>
-                <span class="text-2xl font-bold text-slate-800 flex items-center gap-2"><i class="fa-brands fa-aws text-3xl"></i> CloudPack</span>
-                <span class="text-2xl font-bold text-slate-800 flex items-center gap-2"><i class="fa-brands fa-figma text-3xl"></i> DesignCo</span>
-                <span class="text-2xl font-bold text-slate-800 flex items-center gap-2"><i class="fa-solid fa-cube text-3xl"></i> VoxelTech</span>
-                <span class="text-2xl font-bold text-slate-800 flex items-center gap-2"><i class="fa-brands fa-spotify text-3xl"></i> AudioFit</span>
-                <span class="text-2xl font-bold text-slate-800 flex items-center gap-2"><i class="fa-brands fa-stripe text-3xl"></i> PayFast</span>
-            </div>
-            <div class="flex animate-marquee whitespace-nowrap items-center space-x-16 px-8 absolute top-0 opacity-60 grayscale group-hover:grayscale-0 transition-all duration-500" style="left: 100%;">
-                <span class="text-2xl font-bold text-slate-800 flex items-center gap-2"><i class="fa-brands fa-apple text-3xl"></i> StudioMac</span>
-                <span class="text-2xl font-bold text-slate-800 flex items-center gap-2"><i class="fa-brands fa-aws text-3xl"></i> CloudPack</span>
-                <span class="text-2xl font-bold text-slate-800 flex items-center gap-2"><i class="fa-brands fa-figma text-3xl"></i> DesignCo</span>
-                <span class="text-2xl font-bold text-slate-800 flex items-center gap-2"><i class="fa-solid fa-cube text-3xl"></i> VoxelTech</span>
-                <span class="text-2xl font-bold text-slate-800 flex items-center gap-2"><i class="fa-brands fa-spotify text-3xl"></i> AudioFit</span>
-                <span class="text-2xl font-bold text-slate-800 flex items-center gap-2"><i class="fa-brands fa-stripe text-3xl"></i> PayFast</span>
-            </div>
-        </div>
-    </div>
+
 
     <section class="py-24 bg-white overflow-hidden" id="layanan">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 perspective-1000">
