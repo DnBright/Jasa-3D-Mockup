@@ -312,7 +312,7 @@
             </div>
 
             <!-- Bento Grid with 3D Tilt Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px] sm:auto-rows-[280px]">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto md:auto-rows-[280px]">
                 
                 <!-- Large Item (Spans 2 cols) -->
                 <div class="md:col-span-2 tilt-card bg-slate-50 rounded-3xl p-8 border border-slate-200 hover:border-brand-300 hover:shadow-2xl hover:shadow-brand-500/10 transition-all duration-300 reveal group relative flex flex-col justify-between overflow-hidden cursor-crosshair">
