@@ -16,6 +16,9 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    
     <style>
         /* Modern Isometric 3D CSS Showcase */
         .iso-scene {
@@ -429,46 +432,75 @@
                 </div>
             </div>
 
-            <!-- Portfolio Grid with 3D Tilt & Parallax Layers -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Item 1 -->
-                <div class="tilt-card group rounded-3xl overflow-hidden aspect-[4/5] reveal cursor-crosshair bg-slate-900 border border-slate-800 hover:border-brand-500/50 shadow-2xl">
-                    <img src="https://placehold.co/800x1000/1e293b/475569?text=Skincare+3D+Render" alt="Skincare Mockup" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" style="transform: translateZ(-20px);">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/60 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-300"></div>
-                    <div class="absolute inset-0 p-8 flex flex-col justify-end preserve-3d">
-                        <div class="tz-30 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                            <span class="px-3 py-1 bg-brand-500/20 text-brand-300 border border-brand-500/30 rounded-full text-xs font-bold backdrop-blur-md mb-4 inline-block shadow-lg">Kosmetik & Kaca</span>
-                            <h4 class="text-2xl font-bold text-white mb-2 filter drop-shadow-md tz-10">Serum Glass Bottle</h4>
-                            <p class="text-sm text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 tz-20">Render botol kaca frosted dengan efek caustics cahaya studio yang memantul realistis.</p>
+            <!-- Swiper 3D Coverflow Gallery -->
+            <div class="swiper coverflow-swiper pt-10 pb-16">
+                <div class="swiper-wrapper">
+                    <!-- Item 1 -->
+                    <div class="swiper-slide group rounded-[2rem] overflow-hidden bg-slate-900 border border-slate-800 shadow-[0_20px_50px_rgba(0,0,0,0.6)] cursor-grab active:cursor-grabbing">
+                        <div class="aspect-[4/5] relative w-full h-full">
+                            <img src="https://placehold.co/800x1000/1e293b/475569?text=Skincare+3D+Render" alt="Skincare Mockup" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/50 to-transparent opacity-90 transition-opacity duration-300"></div>
+                            <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
+                                <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                    <span class="px-3 py-1 bg-brand-500/20 text-brand-300 border border-brand-500/30 rounded-full text-[10px] sm:text-xs font-bold backdrop-blur-md mb-3 sm:mb-4 inline-block shadow-lg">Kosmetik & Kaca</span>
+                                    <h4 class="text-xl sm:text-2xl font-bold text-white mb-2 filter drop-shadow-md">Serum Glass Bottle</h4>
+                                    <p class="text-xs sm:text-sm text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Render botol kaca frosted dengan efek caustics cahaya studio yang memantul realistis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="swiper-slide group rounded-[2rem] overflow-hidden bg-slate-900 border border-slate-800 shadow-[0_20px_50px_rgba(0,0,0,0.6)] cursor-grab active:cursor-grabbing">
+                        <div class="aspect-[4/5] relative w-full h-full">
+                            <img src="https://placehold.co/800x1000/0f172a/334155?text=Isometric+UI+Render" alt="App UI Mockup" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/50 to-transparent opacity-90 transition-opacity duration-300"></div>
+                            <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
+                                <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                    <span class="px-3 py-1 bg-blue-500/20 text-blue-300 border border-blue-500/30 rounded-full text-[10px] sm:text-xs font-bold backdrop-blur-md mb-3 sm:mb-4 inline-block shadow-lg">Digital & UI</span>
+                                    <h4 class="text-xl sm:text-2xl font-bold text-white mb-2 filter drop-shadow-md">Fintech Dashboard 3D</h4>
+                                    <p class="text-xs sm:text-sm text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Presentasi UI berlapis melayang dalam lingkungan isometrik dengan pencahayaan neon.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="swiper-slide group rounded-[2rem] overflow-hidden bg-slate-900 border border-slate-800 shadow-[0_20px_50px_rgba(0,0,0,0.6)] cursor-grab active:cursor-grabbing">
+                        <div class="aspect-[4/5] relative w-full h-full">
+                            <img src="https://placehold.co/800x1000/334155/64748b?text=Coffee+Foil+Render" alt="Packaging Mockup" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/50 to-transparent opacity-90 transition-opacity duration-300"></div>
+                            <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
+                                <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                    <span class="px-3 py-1 bg-orange-500/20 text-orange-300 border border-orange-500/30 rounded-full text-[10px] sm:text-xs font-bold backdrop-blur-md mb-3 sm:mb-4 inline-block shadow-lg">F&B Packaging</span>
+                                    <h4 class="text-xl sm:text-2xl font-bold text-white mb-2 filter drop-shadow-md">Artisan Coffee Pouch</h4>
+                                    <p class="text-xs sm:text-sm text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Simulasi material foil aluminium doff dengan efek deboss emas 3D pada logo utama.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 4 (Bonus for Coverflow effect) -->
+                    <div class="swiper-slide group rounded-[2rem] overflow-hidden bg-slate-900 border border-slate-800 shadow-[0_20px_50px_rgba(0,0,0,0.6)] cursor-grab active:cursor-grabbing">
+                        <div class="aspect-[4/5] relative w-full h-full">
+                            <img src="https://placehold.co/800x1000/111827/4b5563?text=Gadget+Mockup" alt="Gadget Mockup" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/50 to-transparent opacity-90 transition-opacity duration-300"></div>
+                            <div class="absolute inset-0 p-6 md:p-8 flex flex-col justify-end">
+                                <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                    <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 rounded-full text-[10px] sm:text-xs font-bold backdrop-blur-md mb-3 sm:mb-4 inline-block shadow-lg">Tech & Hardware</span>
+                                    <h4 class="text-xl sm:text-2xl font-bold text-white mb-2 filter drop-shadow-md">Smartwatch Titanium</h4>
+                                    <p class="text-xs sm:text-sm text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Detail tekstur metal brushed dan layar OLED yang memancarkan cahaya ambient.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Item 2 -->
-                <div class="tilt-card group rounded-3xl overflow-hidden aspect-[4/5] reveal delay-100 cursor-crosshair bg-slate-900 border border-slate-800 hover:border-blue-500/50 shadow-2xl">
-                    <img src="https://placehold.co/800x1000/0f172a/334155?text=Isometric+UI+Render" alt="App UI Mockup" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" style="transform: translateZ(-20px);">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/60 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-300"></div>
-                    <div class="absolute inset-0 p-8 flex flex-col justify-end preserve-3d">
-                        <div class="tz-30 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 border border-blue-500/30 rounded-full text-xs font-bold backdrop-blur-md mb-4 inline-block shadow-lg">Digital & UI</span>
-                            <h4 class="text-2xl font-bold text-white mb-2 filter drop-shadow-md tz-10">Fintech Dashboard 3D</h4>
-                            <p class="text-sm text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 tz-20">Presentasi UI berlapis melayang dalam lingkungan isometrik dengan pencahayaan neon.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 3 -->
-                <div class="tilt-card group rounded-3xl overflow-hidden aspect-[4/5] reveal delay-200 cursor-crosshair bg-slate-900 border border-slate-800 hover:border-orange-500/50 shadow-2xl">
-                    <img src="https://placehold.co/800x1000/334155/64748b?text=Coffee+Foil+Render" alt="Packaging Mockup" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100" style="transform: translateZ(-20px);">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/60 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-300"></div>
-                    <div class="absolute inset-0 p-8 flex flex-col justify-end preserve-3d">
-                        <div class="tz-30 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                            <span class="px-3 py-1 bg-orange-500/20 text-orange-300 border border-orange-500/30 rounded-full text-xs font-bold backdrop-blur-md mb-4 inline-block shadow-lg">F&B Packaging</span>
-                            <h4 class="text-2xl font-bold text-white mb-2 filter drop-shadow-md tz-10">Artisan Coffee Pouch</h4>
-                            <p class="text-sm text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 tz-20">Simulasi material foil aluminium doff dengan efek deboss emas 3D pada logo utama.</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination !bottom-0"></div>
+                <!-- Navigation -->
+                <div class="swiper-button-next !text-brand-500 hidden md:flex after:!text-2xl !w-12 !h-12 bg-dark-950/50 backdrop-blur-md rounded-full border border-slate-800 hover:bg-brand-500 hover:!text-white transition-colors shadow-lg"></div>
+                <div class="swiper-button-prev !text-brand-500 hidden md:flex after:!text-2xl !w-12 !h-12 bg-dark-950/50 backdrop-blur-md rounded-full border border-slate-800 hover:bg-brand-500 hover:!text-white transition-colors shadow-lg"></div>
             </div>
         </div>
     </section>
@@ -815,6 +847,59 @@
                 btnSubmit.classList.remove('opacity-70');
             });
         }
+
+        // Initialize Swiper Coverflow
+        const swiper = new Swiper('.coverflow-swiper', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            initialSlide: 1,
+            coverflowEffect: {
+                rotate: 35,
+                stretch: 0,
+                depth: 250,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
     </script>
+    <style>
+        /* Swiper custom slide sizing for coverflow */
+        .coverflow-swiper .swiper-slide {
+            width: 280px;
+        }
+        @media (min-width: 640px) {
+            .coverflow-swiper .swiper-slide {
+                width: 320px;
+            }
+        }
+        @media (min-width: 1024px) {
+            .coverflow-swiper .swiper-slide {
+                width: 380px;
+            }
+        }
+        /* Style adjustments for swiper pagination dots */
+        .swiper-pagination-bullet {
+            background-color: #475569;
+            opacity: 0.5;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #14b8a6; /* Brand color */
+            opacity: 1;
+        }
+    </style>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </body>
 </html>
