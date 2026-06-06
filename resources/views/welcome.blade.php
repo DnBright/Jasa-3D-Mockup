@@ -682,6 +682,9 @@
         </div>
     </footer>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
     <script>
         // 1. 3D Tilt Effect Logic (Vanilla JS)
         const tiltCards = document.querySelectorAll('.tilt-card');
@@ -849,28 +852,30 @@
         }
 
         // Initialize Swiper Coverflow
-        const swiper = new Swiper('.coverflow-swiper', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            initialSlide: 1,
-            coverflowEffect: {
-                rotate: 35,
-                stretch: 0,
-                depth: 250,
-                modifier: 1,
-                slideShadows: true,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                dynamicBullets: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
+        document.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.coverflow-swiper', {
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                initialSlide: 1,
+                coverflowEffect: {
+                    rotate: 35,
+                    stretch: 0,
+                    depth: 250,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    dynamicBullets: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
         });
     </script>
     <style>
@@ -898,8 +903,5 @@
             opacity: 1;
         }
     </style>
-    
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </body>
 </html>
