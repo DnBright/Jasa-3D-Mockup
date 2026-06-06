@@ -3,13 +3,18 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\BriefController;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/briefs', [BriefController::class, 'store'])->name('briefs.store');
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/dashboard', [BriefController::class, 'dashboard'])->name('dashboard');
+    Route::patch('/dashboard/briefs/{brief}', [BriefController::class, 'updateStatus'])->name('briefs.update-status');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

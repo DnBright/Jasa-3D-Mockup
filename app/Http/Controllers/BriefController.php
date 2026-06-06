@@ -48,4 +48,21 @@ class BriefController extends Controller
 
         return back()->with('success', 'Status brief berhasil diperbarui.');
     }
+
+    /**
+     * Display the admin dashboard with briefs data and stats.
+     */
+    public function dashboard()
+    {
+        $briefs = Brief::latest()->get();
+
+        $stats = [
+            'total' => $briefs->count(),
+            'pending' => $briefs->where('status', 'pending')->count(),
+            'contacted' => $briefs->where('status', 'contacted')->count(),
+            'completed' => $briefs->where('status', 'completed')->count(),
+        ];
+
+        return view('dashboard', compact('briefs', 'stats'));
+    }
 }
